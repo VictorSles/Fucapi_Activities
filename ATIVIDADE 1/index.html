@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Formulário</title>
+</head>
+<body>
+    <section>
+        <form action="">
+            <p id="completename">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" class="inp">
+                    <label for="sobren">Sobrenome:</label>
+                    <input type="text" name="sobren" id="sobren" class="inp">
+                </div>
+            </p>
+            <p>
+                <div>
+                    <label for="datan">Data de Nascimento:</label>
+                    <input type="text" name="dia" id="dia" placeholder="DD" class="data"> /
+                    <input type="text" name="mes" id="mes" placeholder="MM" class="data"> /
+                    <input type="text" name="ano" id="ano" placeholder="AAAA" class="data">
+                </div>
+            </p>
+            <p>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" class="inp">
+                </div>
+            </p>
+            <p id="buttons">
+                <button type="button" class="cbuttons" onclick="func1()">BOTÃO 1</button>
+                <button type="button" class="cbuttons" onclick="func2()">BOTÃO 2</button>
+                <button type="button" class="cbuttons" onclick="func3()">BOTÃO 3</button>
+            </p>
+        </form>
+    </section>
+    <section>
+        <form action="">
+            <h1>Resultados</h1>
+            <hr>
+            <div id="res">
+                <p class="p_res">Você tem <span id="var"></span> anos!</p>
+                <p class="p_res">Seu usuário é <span id="user_res"></span></p>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
