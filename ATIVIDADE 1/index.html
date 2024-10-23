@@ -4,7 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script>
+        function func1(){
+    var variavel = document.getElementById("var")
+    var dia_s = document.getElementById("dia").value;
+    var dia = parseInt(dia_s)
+    var mes_s = document.getElementById("mes").value;
+    var mes = parseInt(mes_s - 1)
+    var ano_s = document.getElementById("ano").value;
+    var ano = parseInt(ano_s)
+    if(dia > 31 || dia < 1 || mes > 12 || mes < 0){
+        alert("Data inválida!")
+    }else if(dia = 22 && mes > 28){
+            alert("Data inválida!")
+        }
+    else{
+        variavel.innerHTML = "Você tem "+ (2024 - ano) + " anos!"
+    }
+}
+function func2(){
+    var variavel = document.getElementById("var")
+    var variavel = document.getElementById("var")
+    var dia = parseInt(document.getElementById("dia").value)
+    var mes_s = document.getElementById("mes").value;
+    var mes = parseInt(mes_s - 1)
+    var ano_s = document.getElementById("ano").value;
+    var ano = parseInt(ano_s)
+    var calc_1 = ano / (dia+mes)
+    variavel.innerHTML = "O resultado de AAAA/(DD+MM) arredondado é " + Math.round(calc_1)
+}
+function func3(){
+    var variavel = document.getElementById("var")
+    var user = document.getElementById("email").value
+    var user_format = user.split("@")[0]
+    variavel.innerHTML = "Seu usuário é " +  user_format
+    
+}
+    </script>
+    <style>
+        body{
+    background-image: url(1.jpeg);
+    background-size: cover;
+}
+section{
+    border: 1px solid black;
+    width: 550px;
+    height: 250px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    margin: auto;
+    background-image: linear-gradient(to top, rgba(34, 30, 30, 0.432), rgb(35, 86, 163));
+    color: beige;
+    margin-bottom: 30px;
+}
+.data{
+    width: 40px;
+    border-radius: 7px;
+    padding: 5px;
+    border: 1px solid black;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+.inp{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 7px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(255, 255, 255, 0.699);
+}
+label{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+input#nome{
+    margin-right: 30px;
+}
+input#email{
+    width: 200px;
+    text-align: center;
+}
+p#buttons{
+    margin-top: 50px;
+    letter-spacing: 40px;
+    text-align: center;
+}
+.cbuttons{
+    width: 100px;
+    height: 50px ;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: rgba(34, 115, 161, 0.637);
+    color: rgba(255, 255, 255, 0.664);
+}
+.cbuttons:hover{
+    background-color: rgba(35, 57, 119, 0.212);
+}   
+h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+p#var{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+.p_res{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+}
+span{
+    color: rgb(119, 218, 119);
+}
+    </style>
     <title>Formulário</title>
 </head>
 <body>
@@ -44,8 +159,7 @@
             <h1>Resultados</h1>
             <hr>
             <div id="res">
-                <p class="p_res">Você tem <span id="var"></span> anos!</p>
-                <p class="p_res">Seu usuário é <span id="user_res"></span></p>
+                <p id="var"></p>
             </div>
         </form>
     </section>
